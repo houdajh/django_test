@@ -1,0 +1,12 @@
+{% extends 'reminders/layout.html' %}
+{% block body %}
+    
+        <ul>
+        {%for reminder in reminders%}
+            <li> {{forloop.counter}} {{reminder}} </li>
+        {% endfor %}
+        </ul>
+       <!--<a href="/reminders/add"> add a new Reminder </a> --> 
+       <a href= {% url 'reminders:add' %}> add a new Reminder </a>
+    
+{% endblock body %}

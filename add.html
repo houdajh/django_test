@@ -1,0 +1,13 @@
+{% extends 'reminders/layout.html' %}
+
+{% block body %}
+        <h1>add reminder </h1>
+        <!--<form action="/reminders">-->
+        <form action={% url 'reminders:add'%} method="POST">
+        {% csrf_token %}
+           <!--<input type="text" name="ADD reminder" >--> 
+           {{form.as_ul}}
+            <input type="submit" >
+        </form>
+        
+ {% endblock body %}
